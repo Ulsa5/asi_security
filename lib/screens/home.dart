@@ -1,4 +1,5 @@
 import 'package:asi_security/screens/components/drawer.dart';
+import 'package:asi_security/screens/components/drawer2.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -39,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: DrawerComponent(),
+      drawer: const DrawerComponent2(),
       appBar: AppBar(
         title: Text(widget.title),
       ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:asi_security/screens/components/drawer2.dart';
 
-class Configs extends StatelessWidget {
-  const Configs({super.key});
+class History extends StatelessWidget {
+  const History({super.key});
 
-  static const String routeName ='/configs';
+  static const String routeName ='/history';
 
   @override
   Widget build(BuildContext context) {
@@ -14,22 +14,22 @@ class Configs extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: const ConfigsPage(title: 'Configuración'),
+      home: const HistoryPage(title: 'Historial'),
     );
   }
 }
 
 
-class ConfigsPage extends StatefulWidget {
-  const ConfigsPage({super.key, required this.title});
+class HistoryPage extends StatefulWidget {
+  const HistoryPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<ConfigsPage> createState() => _ConfigsPage();
+  State<HistoryPage> createState() => _HistoryPage();
 }
 
-class _ConfigsPage extends State<ConfigsPage> {
+class _HistoryPage extends State<HistoryPage> {
 
 
   @override

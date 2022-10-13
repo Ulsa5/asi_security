@@ -1,4 +1,11 @@
+import 'dart:io';
+
+import 'package:asi_security/screens/configs.dart';
+import 'package:asi_security/screens/contacts.dart';
+import 'package:asi_security/screens/historial.dart';
+import 'package:asi_security/screens/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class DrawerComponent2 extends StatefulWidget {
   const DrawerComponent2({Key? key}) : super(key: key);
@@ -13,8 +20,8 @@ class _DrawerComponent2State extends State<DrawerComponent2> {
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
-        children: const [
-          DrawerHeader(
+        children: [
+          const DrawerHeader(
             decoration: BoxDecoration(
               color: Colors.indigoAccent,
               image: DecorationImage(
@@ -25,23 +32,51 @@ class _DrawerComponent2State extends State<DrawerComponent2> {
             child: Text(""),
           ),
           ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Inicio'),
+            leading: const Icon(Icons.home),
+            title: const Text('Inicio'),
+            onTap: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const Home())
+              );
+            },
           ),
           ListTile(
-            leading: Icon(Icons.perm_contact_cal),
-            title: Text('Contactos'),
+            leading: const Icon(Icons.perm_contact_cal),
+            title: const Text('Contactos'),
+            onTap: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const Contacts())
+              );
+            },
           ),
           ListTile(
-            leading: Icon(Icons.history),
-            title: Text('Historial'),
+            leading: const Icon(Icons.history),
+            title: const Text('Historial'),
+            onTap: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const History())
+              );
+            },
           ),
-          Divider(),
+          const Divider(),
           ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Opciones'),
+            leading: const Icon(Icons.settings),
+            title: const Text('Opciones'),
+            onTap: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const Configs())
+              );
+            },
           ),
-          AboutListTile(
+          const AboutListTile(
             icon: Icon(Icons.info),
             applicationIcon: Icon(Icons.local_play),
             applicationName: 'ASI Security App',
@@ -49,10 +84,14 @@ class _DrawerComponent2State extends State<DrawerComponent2> {
             applicationLegalese: 'Corporación A.S.I. - 2022©',
             child: Text('Acerca de'),
           ),
-          Divider(),
+          const Divider(),
           ListTile(
-            leading: Icon(Icons.logout),
-            title: Text('Cerrar Sesión'),
+            leading: const Icon(Icons.logout),
+            title: const Text('Cerrar Sesión'),
+            onTap: (){
+              //SystemChannels.platform.invokeMapMethod('SystemNavigator.pop');
+              Navigator.of(context).pop();
+            },
           ),
         ],
       ),
