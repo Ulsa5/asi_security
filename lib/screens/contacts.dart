@@ -1,6 +1,5 @@
 import 'package:asi_security/screens/components/drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:asi_security/screens/components/drawer2.dart';
 
 class Contacts extends StatelessWidget {
   const Contacts({super.key});
@@ -36,7 +35,7 @@ class _ContactsPage extends State<ContactsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const DrawerComponent2(),
+      drawer: const DrawerComponent(),
       appBar: AppBar(
         title: Text(widget.title),
       ),

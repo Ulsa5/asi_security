@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:asi_security/screens/components/drawer2.dart';
+import 'package:asi_security/screens/components/drawer.dart';
 
 class Configs extends StatelessWidget {
   const Configs({super.key});
@@ -35,7 +35,7 @@ class _ConfigsPage extends State<ConfigsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const DrawerComponent2(),
+      drawer: const DrawerComponent(),
       appBar: AppBar(
         title: Text(widget.title),
       ),
